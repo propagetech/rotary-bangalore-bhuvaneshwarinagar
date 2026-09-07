@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rotary Club of Bangalore Bhuvaneshwarinagar | People of Action</title>
+  <meta name="description" content="A Rotary club in Bengaluru bringing volunteers, professionals and partners together for practical work in education, health, environment and livelihood." />
+  <meta name="theme-color" content="#0A1B33" />
+  <meta name="color-scheme" content="light" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rotary Club of Bangalore Bhuvaneshwarinagar" />
+  <meta property="og:description" content="Local people. Real work. Change that holds. Practical community service in education, health, environment and livelihood." />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:image" content="imgs/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rotary Club of Bangalore Bhuvaneshwari Nagar logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon set built from the official club logo artwork. -->
+  <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="imgs/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="imgs/favicon-180.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,20,1&family=Instrument+Sans:ital,wght@0,400..700;1,400..500&display=swap" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS
+       Brand: Rotary Royal Blue #17458F, Rotary Gold #F7A81B.
+       Ramps built in HSL from those two anchors, on a warm paper neutral.
+       ========================================================================== */
+    :root {
+      /* azure ramp */
+      --azure-950: hsl(217 68% 10%);
+      --azure-900: hsl(217 66% 14%);
+      --azure-800: hsl(217 68% 20%);
+      --azure-700: hsl(217 70% 26%);
+      --azure-600: hsl(217 72% 32%);   /* brand */
+      --azure-500: hsl(214 76% 42%);
+      --azure-300: hsl(212 72% 74%);
+      --azure-200: hsl(212 74% 86%);
+      --azure-100: hsl(212 72% 92%);
+      --azure-50:  hsl(210 64% 96%);
+
+      /* gold ramp */
+      --gold-800: hsl(33 88% 30%);
+      --gold-700: hsl(34 90% 32%);     /* AA gold text on every paper surface: 5.26 / 5.00 / 4.66 */
+      --gold-600: hsl(37 92% 46%);
+      --gold-500: hsl(39 93% 54%);     /* brand */
+      --gold-300: hsl(41 92% 74%);
+      --gold-200: hsl(41 90% 86%);
+      --gold-50:  hsl(42 82% 95%);
+
+      /* warm neutrals */
+      --paper:      hsl(40 40% 98.5%);
+      --paper-2:    hsl(38 30% 96%);
+      --paper-3:    hsl(36 24% 93%);
+      --ink:        hsl(220 32% 11%);
+      --ink-2:      hsl(220 14% 32%);
+      --ink-3:      hsl(220 12% 44%);
+      --line:       hsl(220 16% 87%);
+      --line-soft:  hsl(220 14% 91%);
+
+      /* on-dark */
+      --on-dark:      hsl(40 40% 97%);
+      --on-dark-2:    hsl(212 30% 80%);
+      --on-dark-line: hsl(217 40% 26%);
+
+      /* spacing scale */
+      --s-1: .25rem; --s-2: .5rem;  --s-3: .75rem; --s-4: 1rem;
+      --s-5: 1.5rem; --s-6: 2rem;   --s-7: 3rem;   --s-8: 4rem;
+      --s-9: 6rem;   --s-10: 8rem;
+
+      /* type scale */
+      --fs-xs:   .75rem;
+      --fs-sm:   .8125rem;
+      --fs-base: 1rem;
+      --fs-md:   1.0625rem;
+      --fs-lg:   clamp(1.125rem, .95rem + .6vw, 1.3125rem);
+      --fs-xl:   clamp(1.375rem, 1.15rem + .8vw, 1.625rem);
+      --fs-2xl:  clamp(1.75rem, 1.35rem + 1.7vw, 2.5rem);
+      --fs-3xl:  clamp(2.125rem, 1.5rem + 2.8vw, 3.5rem);
+      --fs-4xl:  clamp(2.5rem, 1.4rem + 5.2vw, 5rem);
+      --fs-num:  clamp(2.25rem, 1.4rem + 3.4vw, 3.75rem);
+
+      /* radii: tight editorial register */
+      --r-1: .25rem; --r-2: .5rem; --r-3: .875rem; --r-4: 1.25rem;
+      --r-pill: 999px;
+
+      /* elevation: two tokens only, one light direction (top) */
+      --shadow-1: 0 1px 2px hsl(217 40% 20% / .06), 0 6px 16px -6px hsl(217 40% 20% / .12);
+      --shadow-2: 0 2px 4px hsl(217 40% 20% / .07), 0 24px 48px -18px hsl(217 40% 20% / .26);
+
+      --wrap: 78rem;
+      --wrap-tight: 62rem;
+      --header-h: 4.75rem;
+
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    /* ==========================================================================
+       BASE
+       ========================================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
+
+    body {
+      margin: 0;
+      min-width: 20rem;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: var(--fs-md);
+      line-height: 1.6;
+      font-feature-settings: "cv05" 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img, svg, video { display: block; max-width: 100%; }
+    img { height: auto; }
+
+    a { color: inherit; text-decoration-thickness: .07em; text-underline-offset: .22em; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+
+    ::selection { background: var(--gold-300); color: var(--azure-950); }
+
+    :focus-visible {
+      outline: 3px solid var(--gold-500);
+      outline-offset: 3px;
+      border-radius: var(--r-1);
+    }
+
+    h1, h2, h3, .display {
+      font-family: Fraunces, "Iowan Old Style", Georgia, "Times New Roman", serif;
+      font-variation-settings: "SOFT" 20, "WONK" 1;
+      font-weight: 600;
+      letter-spacing: -.018em;
+      line-height: 1.06;
+      margin: 0;
+      text-wrap: balance;
+    }
+    h1 { font-size: var(--fs-4xl); letter-spacing: -.03em; }
+    h2 { font-size: var(--fs-3xl); letter-spacing: -.024em; }
+    h3 { font-size: var(--fs-xl); line-height: 1.18; }
+
+    p { margin: 0; }
+    p + p { margin-top: var(--s-4); }
+
+    /* ==========================================================================
+       PRIMITIVES
+       ========================================================================== */
+    .wrap {
+      width: 100%;
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 3rem);
+    }
+    .wrap--tight { max-width: var(--wrap-tight); }
+
+    .section { padding-block: clamp(3.5rem, 8vw, 7rem); }
+    .section--flush-top { padding-top: 0; }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      margin: 0 0 var(--s-4);
+      font-family: "Instrument Sans", sans-serif;
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-700);
+    }
+    .eyebrow::before {
+      content: "";
+      inline-size: 1.75rem;
+      block-size: 2px;
+      flex: none;
+      background: var(--gold-600);
+    }
+    .eyebrow--center { justify-content: center; }
+    .on-dark .eyebrow { color: var(--gold-500); }
+    .on-dark .eyebrow::before { background: var(--gold-500); }
+
+    .lede {
+      font-size: var(--fs-lg);
+      line-height: 1.52;
+      color: var(--ink-2);
+      max-width: 46ch;
+    }
+    .on-dark .lede { color: var(--on-dark-2); }
+
+    .prose { color: var(--ink-2); max-width: 60ch; }
+
+    .section-head { max-width: 40rem; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+    .section-head .lede { margin-top: var(--s-4); }
+
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .625rem;
+      min-height: 3rem;
+      padding: .8125rem 1.5rem;
+      border: 1px solid transparent;
+      border-radius: var(--r-pill);
+      background: var(--azure-600);
+      color: #fff;
+      font-size: var(--fs-base);
+      font-weight: 600;
+      letter-spacing: -.005em;
+      text-decoration: none;
+      transition: background-color .2s var(--ease), transform .2s var(--ease), box-shadow .2s var(--ease);
+    }
+    .btn:hover { background: var(--azure-700); }
+    .btn:active { transform: translateY(1px); }
+    .btn .ico { inline-size: 1.125rem; block-size: 1.125rem; }
+
+    .btn--gold { background: var(--gold-500); color: var(--azure-950); }
+    .btn--gold:hover { background: var(--gold-600); }
+
+    .btn--outline {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+    .btn--outline:hover { background: var(--paper-2); border-color: var(--ink-3); }
+
+    .btn--on-dark {
+      background: transparent;
+      border-color: hsl(212 40% 70% / .45);
+      color: var(--on-dark);
+    }
+    .btn--on-dark:hover { background: hsl(212 60% 90% / .12); border-color: var(--on-dark); }
+
+    /* arrow link */
+    .alink {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      min-height: 2.75rem;
+      font-size: var(--fs-base);
+      font-weight: 600;
+      color: var(--azure-600);
+      text-decoration: none;
+    }
+    .alink .ico { inline-size: 1rem; block-size: 1rem; transition: transform .25s var(--ease); }
+    .alink:hover { color: var(--azure-700); text-decoration: underline; }
+    .alink:hover .ico { transform: translate(2px, -2px); }
+    .on-dark .alink { color: var(--gold-500); }
+    .on-dark .alink:hover { color: var(--gold-300); }
+
+    /* icons */
+    .ico {
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+      flex: none;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-plate {
+      display: grid;
+      place-items: center;
+      inline-size: 3rem;
+      block-size: 3rem;
+      border-radius: var(--r-3);
+      background: var(--azure-50);
+      color: var(--azure-600);
+      border: 1px solid var(--azure-100);
+    }
+    .icon-plate .ico { inline-size: 1.5rem; block-size: 1.5rem; }
+
+    /* "to be confirmed" chip: never fake a fact, label it */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      padding: .1875rem .5rem;
+      border-radius: var(--r-1);
+      background: var(--gold-50);
+      border: 1px dashed var(--gold-600);
+      color: var(--gold-800);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .on-dark .chip {
+      background: hsl(39 93% 54% / .14);
+      border-color: hsl(39 93% 60% / .55);
+      color: var(--gold-300);
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 200;
+      top: .75rem;
+      left: .75rem;
+      padding: .75rem 1.125rem;
+      border-radius: var(--r-2);
+      background: var(--azure-900);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(-160%);
+      transition: transform .18s var(--ease);
+    }
+    .skip-link:focus-visible { transform: none; }
+
+    .sr-only {
+      position: absolute;
+      inline-size: 1px; block-size: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       TICKER
+       ========================================================================== */
+    .ticker {
+      background: var(--azure-950);
+      color: var(--on-dark);
+      border-bottom: 1px solid var(--on-dark-line);
+      overflow: hidden;
+    }
+    .ticker__track {
+      display: flex;
+      inline-size: max-content;
+      gap: 0;
+      animation: ticker 42s linear infinite;
+    }
+    .ticker__group {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+      padding-block: .625rem;
+      padding-inline-end: 2.25rem;
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .ticker__group span { display: inline-flex; align-items: center; gap: 2.25rem; }
+    .ticker__group span::after {
+      content: "";
+      inline-size: 5px; block-size: 5px;
+      border-radius: 50%;
+      background: var(--gold-500);
+    }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker__track { animation: none; }
+      .ticker { overflow-x: auto; }
+    }
+
+    /* ==========================================================================
+       HEADER
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      isolation: isolate;
+      background: hsl(40 40% 98.5% / .82);
+      backdrop-filter: blur(14px) saturate(1.4);
+      -webkit-backdrop-filter: blur(14px) saturate(1.4);
+      border-bottom: 1px solid transparent;
+      transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .header.is-stuck {
+      border-bottom-color: var(--line-soft);
+      box-shadow: var(--shadow-1);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      gap: var(--s-4);
+      min-height: var(--header-h);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      margin-inline-end: auto;
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Official club signature. Rotary's clear space is applied here rather than being
+       baked into the file: --logo-clear matches the ratio on the supplied artwork
+       (about a third of the signature height on every side). */
+    .brand { --logo-h: clamp(2.25rem, 1.8rem + 1.5vw, 3.125rem); }
+    .brand__logo {
+      block-size: var(--logo-h);
+      inline-size: auto;
+      flex: none;
+      margin: calc(var(--logo-h) * .28);
+    }
+    /* The signature is full colour, so on the dark footer it sits on a light plate
+       rather than being recoloured, which Rotary brand rules forbid. The plate edge
+       doubles as the clear space boundary. */
+    .brand--plate {
+      border-radius: var(--r-3);
+      background: var(--paper);
+    }
+    .brand--plate { --logo-h: 2.75rem; }
+    .nav { display: flex; align-items: center; gap: .25rem; }
+    .nav a:not(.btn) {
+      padding: .5rem .75rem;
+      border-radius: var(--r-2);
+      font-size: .9375rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      text-decoration: none;
+      transition: color .18s var(--ease), background-color .18s var(--ease);
+    }
+    .nav a:not(.btn):hover { color: var(--ink); background: var(--paper-2); }
+    .nav .btn { margin-inline-start: .5rem; min-height: 2.625rem; padding: .5rem 1.125rem; font-size: .9375rem; }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      gap: .5rem;
+      min-height: 2.75rem;
+      padding: .5rem .875rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-pill);
+      background: transparent;
+      font-size: .875rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 61.99em) {
+      .nav-toggle { display: inline-flex; }
+      .header__inner { position: relative; }
+      .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: var(--s-4) clamp(1.25rem, 4vw, 3rem) var(--s-6);
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow-2);
+        max-height: 72dvh;
+        overflow-y: auto;
+      }
+      .nav.is-open { display: flex; }
+      .nav a:not(.btn) {
+        padding: .875rem .25rem;
+        border-radius: 0;
+        border-bottom: 1px solid var(--line-soft);
+        font-size: 1.0625rem;
+      }
+      .nav .btn { margin: var(--s-4) 0 0; border-bottom: 0; }
+    }
+
+    /* ==========================================================================
+       HERO
+       ========================================================================== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      background: var(--azure-950);
+      color: var(--on-dark);
+      overflow: hidden;
+    }
+    /* the photograph fills the band; everything above it is stacked with z-index */
+    .hero__photo {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: 62% 50%;
+    }
+    /* Directional scrim. The copy column never extends past the 44% stop, so the text
+       always sits on an effective background of about rgb(24,35,55): white on that is
+       roughly 14:1, well clear of AA. Do not widen .hero__copy without re-checking. */
+    .hero__scrim {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(97deg,
+          hsl(217 68% 10% / .96) 0%,
+          hsl(217 68% 10% / .94) 52%,
+          hsl(217 68% 10% / .70) 64%,
+          hsl(217 68% 10% / .32) 80%,
+          hsl(217 68% 10% / .12) 100%);
+    }
+    @media (max-width: 61.99em) {
+      /* stacked layout: the scrim has to work top to bottom instead of left to right */
+      .hero__photo { object-position: 58% 42%; }
+      .hero__scrim {
+        background:
+          linear-gradient(180deg,
+            hsl(217 68% 10% / .94) 0%,
+            hsl(217 68% 10% / .92) 58%,
+            hsl(217 68% 10% / .84) 74%,
+            hsl(217 68% 10% / .92) 90%,
+            hsl(217 68% 10% / .96) 100%);
+      }
+    }
+
+    .hero__grid {
+      position: relative;
+      padding-block: clamp(3rem, 8vw, 7rem) 0;
+    }
+    .hero__copy { max-width: 34rem; }
+    .hero .lede { color: hsl(212 34% 90%); }
+    .hero h1 { margin-bottom: var(--s-5); }
+    .hero h1 em {
+      font-style: italic;
+      font-variation-settings: "SOFT" 40, "WONK" 1;
+      color: var(--gold-500);
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+      margin-top: var(--s-6);
+    }
+
+    /* the photograph needs room to breathe under the copy before the meta bar */
+    .hero__spacer { block-size: clamp(5rem, 13vw, 10rem); }
+    @media (max-width: 61.99em) { .hero__spacer { block-size: clamp(4rem, 16vw, 7rem); } }
+
+    /* Full width bar across the foot of the hero. It carries its own near opaque
+       background so its text is never judged against the photograph. */
+    .hero__foot {
+      position: relative;
+      background: hsl(217 68% 10% / .93);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid var(--on-dark-line);
+    }
+    .hero__meta {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 clamp(1.5rem, 4vw, 3rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .hero__meta li {
+      padding-block: var(--s-4);
+      border-top: 1px solid var(--on-dark-line);
+    }
+    .hero__meta li:nth-child(-n+2) { border-top: 0; }
+    .hero__meta b {
+      display: block;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: var(--on-dark);
+    }
+    .hero__meta span {
+      display: block;
+      margin-top: .125rem;
+      font-size: var(--fs-sm);
+      color: var(--on-dark-2);
+    }
+    @media (min-width: 48em) {
+      .hero__meta { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .hero__meta li { border-top: 0; }
+    }
+
+    .hero__credit {
+      position: absolute;
+      z-index: 1;
+      right: clamp(.75rem, 2vw, 1.25rem);
+      bottom: calc(100% + .5rem);
+      margin: 0;
+      padding: .3125rem .625rem;
+      border-radius: var(--r-1);
+      background: hsl(217 68% 10% / .8);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      font-size: var(--fs-xs);
+      color: var(--on-dark-2);
+    }
+    @media (max-width: 47.99em) { .hero__credit { display: none; } }
+
+    /* ==========================================================================
+       STATS RAIL  (hairlines, no boxes)
+       ========================================================================== */
+    .stats {
+      background: var(--paper-2);
+      border-block: 1px solid var(--line-soft);
+    }
+    .stats__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: clamp(1.5rem, 4vw, 3rem);
+    }
+    .stats__item {
+      padding-block: clamp(1.75rem, 4vw, 2.75rem);
+      border-top: 1px solid var(--line);
+    }
+    .stats__item:nth-child(-n+2) { border-top: 0; }
+    .stats__num {
+      display: block;
+      font-family: Fraunces, Georgia, serif;
+      font-size: var(--fs-num);
+      font-weight: 600;
+      font-variation-settings: "SOFT" 20, "WONK" 1;
+      line-height: 1;
+      letter-spacing: -.04em;
+      color: var(--azure-600);
+      font-variant-numeric: tabular-nums;
+    }
+    .stats__label {
+      display: block;
+      max-width: 22ch;
+      margin-top: var(--s-3);
+      font-size: var(--fs-base);
+      color: var(--ink-2);
+    }
+    @media (min-width: 48em) {
+      .stats__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .stats__item { border-top: 0; }
+    }
+
+    /* ==========================================================================
+       STATEMENT (about)
+       ========================================================================== */
+    .statement__grid { display: grid; gap: clamp(2rem, 5vw, 4rem); }
+    .statement h2 { max-width: 24ch; }
+    .statement__quote {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: var(--fs-2xl);
+      font-weight: 500;
+      font-variation-settings: "SOFT" 40, "WONK" 1;
+      font-style: italic;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      color: var(--azure-700);
+      max-width: 30ch;
+    }
+
+    .principles { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-5); }
+    .principles li {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--s-4);
+      padding-top: var(--s-5);
+      border-top: 1px solid var(--line);
+    }
+    .principles li:first-child { padding-top: 0; border-top: 0; }
+    .principles .icon-plate { inline-size: 2.5rem; block-size: 2.5rem; border-radius: var(--r-2); }
+    .principles .icon-plate .ico { inline-size: 1.125rem; block-size: 1.125rem; }
+    .principles h3 { font-size: var(--fs-base); font-family: "Instrument Sans", sans-serif; font-weight: 700; letter-spacing: 0; }
+    .principles p { margin-top: .25rem; font-size: var(--fs-base); color: var(--ink-2); }
+
+    @media (min-width: 62em) {
+      .statement__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+      .statement__aside { position: sticky; top: calc(var(--header-h) + 2rem); }
+    }
+
+    /* ==========================================================================
+       FOCUS AREAS (bento)
+       ========================================================================== */
+    .focus { background: var(--paper-2); }
+    .focus__grid {
+      display: grid;
+      gap: clamp(1rem, 2vw, 1.5rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: 40em) { .focus__grid { grid-template-columns: minmax(0, 1fr); } }
+    @media (min-width: 62em) {
+      .focus__grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .card--wide { grid-column: span 4; }
+      .card--tall { grid-column: span 2; }
+      .card--half { grid-column: span 3; }
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: var(--r-4);
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); border-color: var(--line); }
+    .card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-3); }
+    .card--wide .card__media { aspect-ratio: 21 / 9; }
+    .card__media img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      transition: transform .6s var(--ease);
+    }
+    .card:hover .card__media img { transform: scale(1.04); }
+    .card__index {
+      position: absolute;
+      top: var(--s-4);
+      left: var(--s-4);
+      padding: .25rem .5rem;
+      border-radius: var(--r-1);
+      background: hsl(217 68% 10% / .74);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      color: var(--on-dark);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: .12em;
+      font-variant-numeric: tabular-nums;
+    }
+    .card__body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-3);
+      flex: 1;
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+    }
+    .card__body p { color: var(--ink-2); font-size: var(--fs-base); }
+    .card__body .alink { margin-top: auto; }
+    .card__head { display: flex; align-items: center; gap: var(--s-3); }
+    .card__head .icon-plate { inline-size: 2.75rem; block-size: 2.75rem; border-radius: var(--r-2); }
+    .card__head .icon-plate .ico { inline-size: 1.5rem; block-size: 1.5rem; }
+
+    /* type-led tile: no stock photo where a stock photo would lie */
+    .card--typeled {
+      background: linear-gradient(160deg, var(--gold-50), var(--paper));
+      border-color: var(--gold-200);
+    }
+    .card--typeled .card__body { justify-content: center; gap: var(--s-4); padding-block: clamp(1.75rem, 4vw, 2.5rem); }
+    .card--typeled .icon-plate { background: var(--gold-200); border-color: var(--gold-300); color: var(--gold-800); }
+    .card--typeled .card__index {
+      position: static;
+      align-self: flex-start;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding: 0;
+      color: var(--gold-800);
+    }
+    .card--typeled h3 { font-size: var(--fs-2xl); }
+    /* the type led tile centres as one block, so the link is not stranded
+       at the bottom of a tall card */
+    .card--typeled .alink { color: var(--gold-800); margin-top: 0; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .tags li {
+      padding: .375rem .75rem;
+      border: 1px solid var(--gold-300);
+      border-radius: var(--r-pill);
+      background: hsl(42 82% 95% / .7);
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: var(--gold-800);
+    }
+
+    /* ==========================================================================
+       FEATURED BAND (designed empty state)
+       ========================================================================== */
+    .band {
+      background: var(--azure-900);
+      color: var(--on-dark);
+      background-image:
+        radial-gradient(50% 70% at 85% 10%, hsl(214 76% 42% / .32), transparent 65%),
+        radial-gradient(45% 60% at 5% 95%, hsl(39 93% 54% / .12), transparent 70%);
+    }
+    .band__grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+    @media (min-width: 62em) {
+      .band__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+    }
+
+    .photo-slot {
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: var(--s-4);
+      aspect-ratio: 4 / 3;
+      padding: var(--s-6);
+      border: 2px dashed hsl(212 40% 60% / .45);
+      border-radius: var(--r-4);
+      background: hsl(217 68% 10% / .35);
+      text-align: center;
+    }
+    .photo-slot .ico { inline-size: 2.5rem; block-size: 2.5rem; color: var(--gold-500); }
+    .photo-slot p { max-width: 34ch; font-size: var(--fs-sm); color: var(--on-dark-2); }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      margin: var(--s-6) 0 var(--s-6);
+      padding: 0;
+      border-top: 1px solid var(--on-dark-line);
+      list-style: none;
+    }
+    .facts li {
+      padding: var(--s-4) var(--s-4) var(--s-4) 0;
+      border-bottom: 1px solid var(--on-dark-line);
+    }
+    @media (min-width: 48em) { .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    .facts dt, .facts b {
+      display: block;
+      margin-bottom: .5rem;
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--on-dark-2);
+    }
+
+    /* ==========================================================================
+       STEPS
+       ========================================================================== */
+    .steps {
+      display: grid;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      counter-reset: step;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .steps li { padding-top: var(--s-5); border-top: 2px solid var(--azure-200); }
+    .steps li::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: block;
+      margin-bottom: var(--s-4);
+      font-family: Fraunces, Georgia, serif;
+      font-size: 2rem;
+      font-weight: 600;
+      font-variation-settings: "SOFT" 20, "WONK" 1;
+      line-height: 1;
+      letter-spacing: -.04em;
+      color: var(--gold-600);
+      font-variant-numeric: tabular-nums;
+    }
+    .steps h3 { font-size: var(--fs-lg); }
+    .steps p { margin-top: var(--s-3); color: var(--ink-2); font-size: var(--fs-base); }
+
+    /* ==========================================================================
+       EVENTS
+       ========================================================================== */
+    .event {
+      display: grid;
+      gap: var(--s-5);
+      align-items: center;
+      padding: clamp(1.5rem, 3vw, 2rem);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold-500);
+      border-radius: var(--r-3);
+      background: var(--paper);
+      box-shadow: var(--shadow-1);
+    }
+    .event__date {
+      display: grid;
+      place-items: center;
+      gap: .125rem;
+      inline-size: 5.5rem;
+      padding: var(--s-4) var(--s-2);
+      border-radius: var(--r-2);
+      background: var(--azure-50);
+      border: 1px solid var(--azure-100);
+      text-align: center;
+    }
+    .event__date span {
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--azure-700);
+    }
+    .event__date b {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--azure-700);
+    }
+    .event p { margin-top: var(--s-2); color: var(--ink-2); font-size: var(--fs-base); }
+    .event__meta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-4); }
+    .event__meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      font-size: var(--fs-sm);
+      color: var(--ink-3);
+    }
+    .event__meta .ico { inline-size: 1rem; block-size: 1rem; }
+    @media (min-width: 48em) {
+      .event { grid-template-columns: auto minmax(0, 1fr) auto; }
+    }
+
+    /* ==========================================================================
+       CTA
+       ========================================================================== */
+    .cta { background: var(--gold-500); color: var(--azure-950); }
+    .cta__inner {
+      display: grid;
+      gap: var(--s-5);
+      align-items: center;
+      padding-block: clamp(2.75rem, 6vw, 4.5rem);
+    }
+    .cta h2 { max-width: 26ch; }
+    .cta p { margin-top: var(--s-4); max-width: 46ch; color: hsl(217 60% 16% / .82); font-size: var(--fs-lg); }
+    .cta .btn { background: var(--azure-900); color: #fff; }
+    .cta .btn:hover { background: var(--azure-950); }
+    @media (min-width: 62em) {
+      .cta__inner { grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-8); }
+    }
+
+    /* ==========================================================================
+       CONTACT
+       ========================================================================== */
+    .contact { background: var(--paper-2); }
+    .contact__grid { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: start; }
+    @media (min-width: 62em) {
+      .contact__grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+    }
+
+    .details { display: grid; gap: 0; margin: var(--s-6) 0 0; padding: 0; list-style: none; }
+    .details li {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--s-4);
+      padding-block: var(--s-4);
+      border-top: 1px solid var(--line);
+    }
+    .details li:last-child { border-bottom: 1px solid var(--line); }
+    .details .icon-plate { inline-size: 2.5rem; block-size: 2.5rem; border-radius: var(--r-2); }
+    .details .icon-plate .ico { inline-size: 1.125rem; block-size: 1.125rem; }
+    .details b { display: block; font-size: var(--fs-base); }
+    .details li > div > span { display: block; margin-top: .375rem; font-size: var(--fs-base); color: var(--ink-2); }
+    .details .chip { margin-inline-end: .5rem; }
+
+    .form {
+      position: relative;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border: 1px solid var(--line);
+      border-radius: var(--r-4);
+      background: var(--paper);
+      box-shadow: var(--shadow-2);
+    }
+    .form h3 { font-size: var(--fs-xl); }
+    .form__note { margin-top: var(--s-3); font-size: var(--fs-sm); color: var(--ink-3); }
+    .form__grid {
+      display: grid;
+      gap: var(--s-4);
+      margin-top: var(--s-5);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: 40em) { .form__grid { grid-template-columns: minmax(0, 1fr); } }
+    .field { display: grid; gap: .375rem; }
+    .field--full { grid-column: 1 / -1; }
+    .field label { font-size: var(--fs-sm); font-weight: 600; }
+    .field .req { color: var(--gold-800); }
+    .field input, .field select, .field textarea {
+      min-height: 3rem;
+      padding: .75rem .875rem;
+      border: 1px solid var(--line);
+      border-radius: var(--r-2);
+      background: var(--paper);
+      font-size: var(--fs-base);
+      transition: border-color .18s var(--ease), box-shadow .18s var(--ease);
+    }
+    .field textarea { min-height: 8rem; resize: vertical; }
+    .field select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234B5263' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+      background-size: 1.125rem;
+      padding-inline-end: 2.5rem;
+    }
+    .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--ink-3); }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--azure-500);
+      box-shadow: 0 0 0 3px hsl(214 76% 42% / .16);
+      outline: none;
+    }
+    .form .btn { margin-top: var(--s-5); inline-size: 100%; }
+    @media (min-width: 40em) { .form .btn { inline-size: auto; } }
+
+    /* designed success state */
+    .form__success { display: none; text-align: center; padding-block: var(--s-4); }
+    .form.is-sent .form__body { display: none; }
+    .form.is-sent .form__success { display: grid; justify-items: center; gap: var(--s-4); }
+    .form__success svg { inline-size: min(15rem, 70%); block-size: auto; }
+    .form__success h3 { max-width: 24ch; }
+    .form__success h3:focus, .form__success h3:focus-visible { outline: none; }
+    .form__success p { max-width: 42ch; color: var(--ink-2); font-size: var(--fs-base); }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .footer {
+      background: var(--azure-950);
+      color: var(--on-dark);
+      padding-block: clamp(3rem, 6vw, 5rem) var(--s-6);
+    }
+    .footer__wordmark {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.75rem, 1rem + 3.4vw, 3.25rem);
+      font-weight: 600;
+      font-variation-settings: "SOFT" 20, "WONK" 1;
+      line-height: 1.02;
+      letter-spacing: -.03em;
+      max-width: 26ch;
+      margin: 0 0 var(--s-6);
+      color: var(--on-dark);
+    }
+    .footer__wordmark span { color: hsl(212 30% 80% / .45); }
+    .footer__grid {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3rem);
+      padding-top: clamp(2rem, 4vw, 3rem);
+      border-top: 1px solid var(--on-dark-line);
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+    .footer h3 {
+      font-family: "Instrument Sans", sans-serif;
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      margin-bottom: var(--s-4);
+    }
+    .footer__links { list-style: none; margin: 0; padding: 0; display: grid; gap: .125rem; }
+    .footer__links a {
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      min-height: 2.5rem;
+      padding-block: .25rem;
+      color: var(--on-dark-2);
+      text-decoration: none;
+      font-size: var(--fs-base);
+    }
+    .footer__links a:hover { color: var(--on-dark); text-decoration: underline; }
+    .footer__links a[aria-disabled="true"] { color: hsl(212 30% 80% / .68); cursor: not-allowed; }
+    .footer__links .ico { inline-size: .875rem; block-size: .875rem; }
+    .footer__about { color: var(--on-dark-2); font-size: var(--fs-base); max-width: 38ch; }
+    .footer__address {
+      margin-top: var(--s-4);
+      font-style: normal;
+      font-size: var(--fs-base);
+      line-height: 1.9;
+      color: var(--on-dark-2);
+    }
+    /* WCAG 2.2 AA target size: keep the inline contact link at least 24px tall */
+    .footer__address a { color: var(--on-dark); display: inline-block; padding-block: .25rem; }
+    .footer__legal {
+      margin-top: clamp(2rem, 4vw, 3rem);
+      padding-top: var(--s-5);
+      border-top: 1px solid var(--on-dark-line);
+      display: grid;
+      gap: var(--s-3);
+      font-size: var(--fs-sm);
+      color: hsl(212 30% 80% / .78);
+      max-width: 90ch;
+    }
+
+    /* ==========================================================================
+       REVEAL
+       ========================================================================== */
+    /* Content is visible by default. The hidden start state is only ever applied
+       once JS has confirmed it can also remove it, so a script error or a blocked
+       script can never leave the page blank. */
+    @media (prefers-reduced-motion: no-preference) {
+      .js-anim .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity .7s var(--ease), transform .7s var(--ease);
+      }
+      .js-anim .reveal.is-in { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    IMPLEMENTATION / COMPLIANCE NOTES  (read before publishing)
+
+    1. LOGO. The header and footer now carry the official club signature, generated from
+       the Rotary Brand Center logo template and used unaltered (imgs/rotary-club-logo.svg,
+       converted from the supplied PDF with no change to shape, proportion or colour). The
+       page margin inside the artwork is Rotary's clear space, so do not crop it.
+       NAME CHECK: the signature reads "Rotary Bhuvaneshwari Nagar" while the page text
+       says "Rotary Club of Bangalore Bhuvaneshwarinagar". Confirm the chartered name and
+       make the two agree before launch.
+       DARK SECTIONS: the full colour signature sits on a light plate in the footer because
+       recolouring it is not permitted. For a borderless treatment, download the official
+       reverse version from the same template and swap it in.
+       FAVICON: imgs/favicon.svg places the Rotary wheel from this artwork on a Royal Blue
+       plate. The wheel is isolated from the club signature, not redrawn. Replace it with
+       the official Mark of Excellence asset if the club wants a fully sanctioned icon.
+    2. FACTS. Anything shown with a dashed "to be confirmed" chip is a real gap, not copy.
+       Replace only with figures, dates, partners and outcomes the club can evidence.
+    3. PHOTOGRAPHY. Every photograph on this page is a placeholder. Rotary's People of
+       Action direction expects real photographs of the actual club, so replace all of
+       them with club-owned or club-licensed images and hold written consent for everyone
+       identifiable in each frame.
+       HERO IMAGE. imgs/hero-hands-*.{webp,jpg} are derived from imgs/hero-hands-source.png,
+       an AI generated illustration, approved by the client for use as generic illustrative
+       artwork. It depicts no identifiable person, so no model or photo releases are needed.
+       Conditions attached to that approval, which the page already meets:
+         - it is never captioned or implied to be a photograph of club members,
+           beneficiaries or a specific activity. The alt text calls it an illustration and
+           a visible credit line says the same. Do not replace either with a documentary
+           caption such as "our volunteers in Bengaluru".
+         - no Rotary wheel, signature or branded artwork was put through the generator.
+           The official club signature is applied separately in the header and footer.
+       Still open for the club: confirm the AI service's terms permit this use, add the
+       media register entry required by rule 6.6, and clear it with the district public
+       image team if they review the site.
+       The four focus-area photographs are licensed stock standing in for club images.
+       The "Featured project" section is intentionally an empty photo slot rather than a
+       stock photograph, because a stock image there would misrepresent club work.
+    4. ICONS. Lucide v1.42.0 (https://lucide.dev), downloaded and inlined unmodified as
+       an SVG sprite, coloured from brand tokens through currentColor. Licence: ISC, which
+       permits commercial use and requires only that the copyright and permission notice
+       be retained. The full text is kept at imgs/icons-LICENSE.txt and the sprite carries
+       the notice inline, so no visible credit line is needed in the footer.
+       The Noun Project was checked first and is not usable here: its public endpoints
+       serve only 200px raster previews, SVG downloads return 403 without an account, and
+       most of its catalogue is CC BY, which would require a permanent visible credit.
+    5. ILLUSTRATION. The enquiry-sent state uses "Mail sent" from unDraw
+       (https://undraw.co), recoloured to brand tokens. The unDraw licence permits
+       commercial use without attribution.
+    6. DONATIONS. There is deliberately no payment flow. Do not add one until the
+       receiving entity, receipting, 80G position, privacy notice and club or district
+       approval are all confirmed.
+    7. FORM. The enquiry form is a front end prototype. It does not transmit or store
+       anything. Connect it to a club-controlled handler only after a privacy review, and
+       publish the privacy policy link before it goes live.
+    8. FONTS. Fraunces and Instrument Sans load from Google Fonts for this prototype.
+       Self-host both before launch, per house standard.
+    9. SOCIAL CARD. og:image points at a relative path. Most scrapers resolve it, but make
+       it an absolute https URL once the domain is live.
+  -->
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!--
+    Icon sprite: Lucide v1.42.0 (https://lucide.dev), ISC licensed, paths used unmodified.
+    Copyright (c) 2026 Lucide Icons and Contributors. Full licence: imgs/icons-LICENSE.txt.
+    Self-hosted inline rather than pulled from a CDN, sized and coloured from brand tokens
+    through currentColor. One 24px grid, one stroke weight across the whole set.
+  -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <!-- book-open: Education -->
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16" /><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></symbol>
+      <!-- heart-pulse: Health -->
+      <symbol id="i-care" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></symbol>
+      <!-- sprout: Environment -->
+      <symbol id="i-sapling" viewBox="0 0 24 24"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" /><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" /><path d="M5 21h14" /></symbol>
+      <!-- briefcase-business: Livelihood -->
+      <symbol id="i-skills" viewBox="0 0 24 24"><path d="M12 12h.01" /><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M22 13a18.15 18.15 0 0 1-20 0" /><rect width="20" height="14" x="2" y="6" rx="2" /></symbol>
+      <!-- ear: we ask before we act -->
+      <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" /><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" /></symbol>
+      <!-- circle-check-big: we finish what we start -->
+      <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></symbol>
+      <!-- scale: we report honestly -->
+      <symbol id="i-scales" viewBox="0 0 24 24"><path d="M12 3v18" /><path d="m19 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" /><path d="m5 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M7 21h10" /></symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3" /><path d="M16 2v3" /><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M8 13h.01" /><path d="M12 13h.01" /><path d="M16 13h.01" /><path d="M8 17h.01" /><path d="M12 17h.01" /><path d="M16 17h.01" /></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /><circle cx="12" cy="13" r="3" /></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></symbol>
+      <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+    </defs>
+  </svg>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__group">
+        <span>Education</span><span>Health</span><span>Environment</span><span>Livelihood</span><span>People of Action</span><span>Bengaluru</span>
+      </div>
+      <div class="ticker__group">
+        <span>Education</span><span>Health</span><span>Environment</span><span>Livelihood</span><span>People of Action</span><span>Bengaluru</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="site-header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#top">
+        <img class="brand__logo" src="imgs/rotary-club-logo.svg" width="261" height="75"
+             alt="Rotary Club of Bangalore Bhuvaneshwari Nagar, back to top" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <svg class="ico" aria-hidden="true"><use href="#i-menu" /></svg>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#focus">Focus areas</a>
+        <a href="#involved">Get involved</a>
+        <a href="#news">News</a>
+        <a class="btn" href="#contact">Contact the club</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================================ HERO ================================ -->
+    <section class="hero on-dark" id="top" aria-labelledby="hero-title">
+      <!-- PLACEHOLDER PHOTO. See compliance note 3: confirm the source and licence of
+           this image, and replace it with a club-owned photograph of the club at work. -->
+      <picture>
+        <source type="image/webp" sizes="100vw"
+                srcset="imgs/hero-hands-640.webp 640w, imgs/hero-hands-900.webp 900w, imgs/hero-hands-1200.webp 1200w, imgs/hero-hands-1536.webp 1536w" />
+        <img class="hero__photo" src="imgs/hero-hands-1200.jpg" width="1536" height="1024"
+             sizes="100vw"
+             srcset="imgs/hero-hands-640.jpg 640w, imgs/hero-hands-900.jpg 900w, imgs/hero-hands-1200.jpg 1200w, imgs/hero-hands-1536.jpg 1536w"
+             fetchpriority="high" decoding="async"
+             alt="Illustration of hands with diverse skin tones reaching together, representing community inclusion and collaboration" />
+      </picture>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Bengaluru, Karnataka, India</p>
+          <h1 id="hero-title">Local people. Real work. Change that <em>holds</em>.</h1>
+          <p class="lede">We are a Rotary club in Bengaluru. We bring volunteers, professionals and partners together for practical service in education, health, environment and livelihood, and we stay long enough to see it hold.</p>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="#focus">
+              See what we work on
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+            <a class="btn btn--on-dark" href="#involved">Volunteer or partner</a>
+          </div>
+        </div>
+        <div class="hero__spacer" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__foot">
+        <div class="wrap">
+          <p class="hero__credit">Illustrative artwork, not a photograph of club members or beneficiaries.</p>
+          <ul class="hero__meta">
+            <li><b>Four</b><span>focus areas</span></li>
+            <li><b>Volunteer led</b><span>members give the time</span></li>
+            <li><b>Partner backed</b><span>schools, clinics, local bodies</span></li>
+            <li><b>Since 1905</b><span>Rotary worldwide</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ STATS ================================ -->
+    <section class="stats" aria-labelledby="stats-title">
+      <h2 class="sr-only" id="stats-title">The club at a glance</h2>
+      <div class="wrap stats__grid">
+        <div class="stats__item">
+          <span class="stats__num">04</span>
+          <span class="stats__label">Focus areas the club works in</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num">1905</span>
+          <span class="stats__label">Rotary begins in Chicago, now a worldwide network</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num"><span class="chip">To confirm</span></span>
+          <span class="stats__label">Members in this club</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num"><span class="chip">To confirm</span></span>
+          <span class="stats__label">Projects delivered this Rotary year</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ ABOUT ================================ -->
+    <section class="section statement" id="about" aria-labelledby="about-title">
+      <div class="wrap statement__grid">
+        <div class="statement__aside reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2 id="about-title">Service that starts by listening.</h2>
+          <blockquote class="statement__quote" style="margin-top:var(--s-5)">
+            A club is only as useful as the questions it asks first.
+          </blockquote>
+          <p class="prose" style="margin-top:var(--s-5)">We are members of Rotary International, working in and around Bengaluru. Some of us are teachers, doctors, engineers and business owners. What we share is a habit of turning up, and a preference for work that can be checked.</p>
+          <a class="btn btn--outline" href="#contact" style="margin-top:var(--s-6)">Meet the club</a>
+        </div>
+
+        <div class="reveal">
+          <ul class="principles">
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-ear" /></svg></span>
+              <div>
+                <h3>We ask before we act</h3>
+                <p>We begin with the people closest to the problem, not with a plan we brought with us. A short conversation with a headmistress, a nurse or a ward office usually reshapes the whole project.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-check-circle" /></svg></span>
+              <div>
+                <h3>We finish what we start</h3>
+                <p>Small, clear commitments with a named owner, a date and a follow up visit. We would rather do four things properly than announce fourteen.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-scales" /></svg></span>
+              <div>
+                <h3>We report honestly</h3>
+                <p>Numbers we can evidence, photographs we have permission to publish, and names only with consent. Where we do not yet have a figure, we say so instead of rounding one up.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= FOCUS AREAS ============================= -->
+    <section class="section focus" id="focus" aria-labelledby="focus-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">What we work on</p>
+          <h2 id="focus-title">Four areas where a local club can genuinely move things.</h2>
+          <p class="lede">Each of these is chosen because a club our size can make a measurable difference in it without waiting for anyone else.</p>
+        </div>
+
+        <div class="focus__grid">
+          <article class="card card--wide reveal">
+            <div class="card__media">
+              <!-- PLACEHOLDER PHOTO. Replace with a club-owned education project image. -->
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&h=515&q=80"
+                   width="1200" height="515" loading="lazy" decoding="async"
+                   alt="Students seated at desks facing a teacher during a classroom session" />
+              <span class="card__index">01</span>
+            </div>
+            <div class="card__body">
+              <div class="card__head">
+                <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-book" /></svg></span>
+                <h3>Education</h3>
+              </div>
+              <p>Scholarships, classroom and toilet repair, learning material, library and digital equipment, and mentoring for students who are one small support away from staying in school.</p>
+              <a class="alink" href="#contact">
+                Tell us about a school that needs help
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--tall reveal">
+            <div class="card__media">
+              <!-- PLACEHOLDER PHOTO. Replace with a club-owned health project image. -->
+              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&h=500&q=80"
+                   width="800" height="500" loading="lazy" decoding="async"
+                   alt="One person holding another person's hands in a gesture of care and reassurance" />
+              <span class="card__index">02</span>
+            </div>
+            <div class="card__body">
+              <div class="card__head">
+                <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-care" /></svg></span>
+                <h3>Health</h3>
+              </div>
+              <p>Screening and eye camps, blood donation drives, preventive awareness, and help for families navigating care they would otherwise go without.</p>
+              <a class="alink" href="#contact">
+                Partner on a health camp
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--half reveal">
+            <div class="card__media">
+              <!-- PLACEHOLDER PHOTO. Replace with a club-owned environment project image. -->
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&h=563&q=80"
+                   width="900" height="563" loading="lazy" decoding="async"
+                   alt="A pair of hands cupping soil and a young sapling above green ground cover" />
+              <span class="card__index">03</span>
+            </div>
+            <div class="card__body">
+              <div class="card__head">
+                <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-sapling" /></svg></span>
+                <h3>Environment</h3>
+              </div>
+              <p>Tree planting with a watering plan attached, lake and street clean ups, waste segregation drives, and environmental education inside schools.</p>
+              <a class="alink" href="#contact">
+                Join a planting or clean up
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Deliberately type led. A stock handshake photograph here would say nothing true. -->
+          <article class="card card--half card--typeled reveal">
+            <div class="card__body">
+              <span class="card__index">04</span>
+              <div class="card__head">
+                <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-skills" /></svg></span>
+                <h3>Livelihood</h3>
+              </div>
+              <p>Vocational training, tools and equipment, career guidance and small business support. The aim is narrow and practical: turn a skill somebody already has into an income they can rely on.</p>
+              <ul class="tags">
+                <li>Tailoring and trade kits</li>
+                <li>Computer and spoken English</li>
+                <li>Interview coaching</li>
+                <li>Seed capital for a first stall</li>
+              </ul>
+              <a class="alink" href="#contact">
+                Offer training, tools or mentorship
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURED PROJECT (empty) ======================= -->
+    <section class="section band on-dark" aria-labelledby="featured-title">
+      <div class="wrap band__grid">
+        <div class="reveal">
+          <!-- Intentional empty state. Do not fill with stock photography. -->
+          <div class="photo-slot">
+            <svg class="ico" aria-hidden="true"><use href="#i-camera" /></svg>
+            <p><strong>Club photograph goes here.</strong> Use an image the club owns, with written consent from everyone identifiable in the frame.</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="eyebrow">Featured project</p>
+          <h2 id="featured-title">This space is reserved for one real story.</h2>
+          <p class="lede" style="margin-top:var(--s-5)">Pick a single project the club has actually delivered and tell it properly: what the community asked for, what the club did, who partnered, and what changed afterwards. One well evidenced story earns more trust than a long list.</p>
+
+          <ul class="facts">
+            <li><b>When</b><span class="chip">To confirm</span></li>
+            <li><b>Where</b><span class="chip">To confirm</span></li>
+            <li><b>Partners</b><span class="chip">To confirm</span></li>
+            <li><b>What changed</b><span class="chip">To confirm</span></li>
+          </ul>
+
+          <a class="btn btn--gold" href="#contact">
+            Send us the project details
+            <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= GET INVOLVED ============================= -->
+    <section class="section" id="involved" aria-labelledby="involved-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Get involved</p>
+          <h2 id="involved-title">There is a practical way in for almost everyone.</h2>
+          <p class="lede">You do not need to join the club to work with it. Most people start with one project and decide from there.</p>
+        </div>
+
+        <ol class="steps reveal">
+          <li>
+            <h3>Tell us what you can offer</h3>
+            <p>An evening a month, a professional skill, a venue, transport, equipment, funding, or simply a community need you know about and we do not.</p>
+          </li>
+          <li>
+            <h3>We match you to live work</h3>
+            <p>A club member points you at a project that is actually running, with a named contact, a real date and a clear idea of what is needed from you.</p>
+          </li>
+          <li>
+            <h3>Show up and do the work</h3>
+            <p>A short briefing, defined roles, and a follow up afterwards so you can see what your time actually changed.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================= NEWS & EVENTS ============================= -->
+    <section class="section section--flush-top" id="news" aria-labelledby="news-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">News and events</p>
+          <h2 id="news-title">Meetings and events, published once they are confirmed.</h2>
+          <p class="lede">Nothing goes on this page until the date, time and venue are settled, and expired entries come down the same week.</p>
+        </div>
+
+        <article class="event reveal">
+          <div class="event__date">
+            <span>Date</span>
+            <b>TBC</b>
+          </div>
+          <div>
+            <h3>Weekly club meeting</h3>
+            <p>Add the confirmed day, time and venue here, or the joining details if the meeting is online. Do not publish members' personal addresses or phone numbers.</p>
+            <div class="event__meta">
+              <span><svg class="ico" aria-hidden="true"><use href="#i-clock" /></svg> Time to confirm</span>
+              <span><svg class="ico" aria-hidden="true"><use href="#i-pin" /></svg> Venue to confirm</span>
+              <span><svg class="ico" aria-hidden="true"><use href="#i-people" /></svg> Guests welcome</span>
+            </div>
+          </div>
+          <a class="btn btn--outline" href="#contact">Ask for details</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================= CTA ================================= -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap cta__inner">
+        <div>
+          <h2 id="cta-title">Good ideas get stronger when people work on them together.</h2>
+          <p>Write to the club to volunteer, propose a partnership, offer a skill, or point us at something in your neighbourhood that needs attention.</p>
+        </div>
+        <a class="btn" href="#contact">
+          Contact the club
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =============================== CONTACT =============================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Start a conversation.</h2>
+          <p class="lede" style="margin-top:var(--s-5)">One club email, answered by a member. If your enquiry is about a specific project we will put you in touch with the person running it.</p>
+
+          <ul class="details">
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-mail" /></svg></span>
+              <div>
+                <b>Club email</b>
+                <span><span class="chip">To confirm</span> Use a club controlled address, not a personal one.</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-calendar" /></svg></span>
+              <div>
+                <b>Meeting</b>
+                <span><span class="chip">To confirm</span> Day, time and a venue that is safe to publish.</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-pin" /></svg></span>
+              <div>
+                <b>Where we work</b>
+                <span>Bengaluru, Karnataka, India</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon-plate"><svg class="ico" aria-hidden="true"><use href="#i-handshake" /></svg></span>
+              <div>
+                <b>District</b>
+                <span><span class="chip">To confirm</span> Rotary district number and district website.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Prototype only. Connect to a club-controlled handler after a privacy review. -->
+        <form class="form reveal" id="enquiry-form" novalidate>
+          <div class="form__body">
+            <h3>Send an enquiry</h3>
+            <p class="form__note">This is a design prototype. Nothing you type here is sent or stored.</p>
+
+            <div class="form__grid">
+              <div class="field">
+                <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field field--full">
+                <label for="interest">I would like to <span class="req" aria-hidden="true">*</span></label>
+                <select id="interest" name="interest" required>
+                  <option value="" selected disabled>Choose one</option>
+                  <option>Volunteer on a project</option>
+                  <option>Partner with the club</option>
+                  <option>Tell you about a community need</option>
+                  <option>Offer a skill or training</option>
+                  <option>Ask about club meetings</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+            </div>
+
+            <button class="btn" type="submit">
+              Send enquiry
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </button>
+            <p class="form__note">Before launch, link the club's privacy policy here and say how enquiry details are used, stored and for how long.</p>
+            <p class="form__note" id="form-error" role="alert"></p>
+          </div>
+
+          <div class="form__success" role="status" aria-live="polite">
+            <!-- Illustration: "Mail sent" from unDraw (https://undraw.co), recoloured
+                 to brand tokens. unDraw licence: free commercial use, no attribution required. -->
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 891.191 800"><g transform="translate(-675 -284.163)"><path d="M1194.991,500.1a1.558,1.558,0,0,1-.893-.28L761.7,198.684a7.842,7.842,0,0,0-8.956.015L323.462,499.815a1.564,1.564,0,1,1-1.8-2.56L750.949,196.139a10.979,10.979,0,0,1,12.539-.021l432.4,301.133a1.564,1.564,0,0,1-.895,2.847Z" transform="translate(363.381 90)" fill="#17458F"/><path d="M23.264,311.923,432.918,8.319l412.553,303.6L438.716,564.329Z" transform="translate(688.109 288.85)" fill="#DCE6F2"/><path d="M565.6,657.519H363.223a9.455,9.455,0,1,1,0-18.91H565.6a9.455,9.455,0,1,1,0,18.91Z" transform="translate(381.845 340.442)" fill="#DCE6F2"/><path d="M435.832,631.519H363.223a9.455,9.455,0,1,1,0-18.91h72.609a9.455,9.455,0,0,1,0,18.91Z" transform="translate(381.845 325.791)" fill="#F7A81B"/><path d="M696.632,665.127a11.825,11.825,0,0,1-4.486-.879L439.5,559.418V231.282a10.957,10.957,0,0,1,10.944-10.944H935.127a10.957,10.957,0,0,1,10.944,10.944V559.647l-.475.2L701.254,664.2a11.909,11.909,0,0,1-4.622.93Z" transform="translate(430.155 104.749)" fill="#FBFAF7"/><path d="M696.914,666.19a12.621,12.621,0,0,1-4.784-.936L439,560.222V231.563a11.739,11.739,0,0,1,11.726-11.726H935.409a11.74,11.74,0,0,1,11.726,11.726V560.445L701.843,665.2A12.68,12.68,0,0,1,696.914,666.19ZM442.127,558.133l251.2,104.229a9.566,9.566,0,0,0,7.3-.044L944.008,558.381V231.563a8.61,8.61,0,0,0-8.6-8.6H450.726a8.609,8.609,0,0,0-8.6,8.6Z" transform="translate(429.873 104.467)" fill="#17458F"/><path d="M1195.246,387.837h-.313L1015.444,464.48,769.867,569.343a7.921,7.921,0,0,1-6.067.031L510.437,464.261l-183.9-76.3-.281-.125h-.313A10.957,10.957,0,0,0,315,398.782v475.3a10.957,10.957,0,0,0,10.944,10.944h869.3a10.957,10.957,0,0,0,10.944-10.944v-475.3A10.957,10.957,0,0,0,1195.246,387.837Zm7.817,486.246a7.82,7.82,0,0,1-7.817,7.817h-869.3a7.821,7.821,0,0,1-7.818-7.817v-475.3a7.835,7.835,0,0,1,7.521-7.817l184.789,76.674L762.6,572.267a11.133,11.133,0,0,0,8.505-.047l244.342-104.347,180.115-76.908a7.843,7.843,0,0,1,7.5,7.817Z" transform="translate(360 199.134)" fill="#17458F"/><path d="M643.155,536.748a39.968,39.968,0,0,1-24.049-7.988l-.43-.323L528.111,459.1a40.236,40.236,0,0,1,48.943-63.878L635.716,440.2,774.342,259.411a40.234,40.234,0,0,1,56.413-7.447l-.862,1.17.884-1.153a40.281,40.281,0,0,1,7.447,56.413L675.166,521.045A40.252,40.252,0,0,1,643.155,536.748Z" transform="translate(456.019 131.356)" fill="#F7A81B"/><path d="M565.6,657.519H363.223a9.455,9.455,0,1,1,0-18.91H565.6a9.455,9.455,0,1,1,0,18.91Z" transform="translate(381.845 381.093)" fill="#DCE6F2"/></g></svg>
+            <h3>That would have reached us.</h3>
+            <p>In the live version a club member replies within a few days. This prototype has no handler connected, so nothing was sent.</p>
+            <button class="btn btn--outline" type="button" id="form-reset">Write another</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================ FOOTER ================================ -->
+  <footer class="footer on-dark">
+    <div class="wrap">
+      <p class="footer__wordmark">Rotary Club of Bangalore Bhuvaneshwarinagar <span>People of Action</span></p>
+
+      <div class="footer__grid">
+        <div>
+          <a class="brand brand--plate" href="#top" style="margin-bottom:var(--s-4)">
+            <img class="brand__logo" src="imgs/rotary-club-logo.svg" width="261" height="75"
+                 alt="Rotary Club of Bangalore Bhuvaneshwari Nagar, back to top" />
+          </a>
+          <p class="footer__about">A local Rotary club serving Bengaluru, Karnataka, India through practical community service and partnership.</p>
+          <address class="footer__address">
+            Bengaluru, Karnataka, India<br />
+            <span class="chip">To confirm</span> club email address<br />
+            <a href="#contact">Send an enquiry through the contact form</a>
+          </address>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer__links">
+            <li><a href="#about">About the club</a></li>
+            <li><a href="#focus">Focus areas</a></li>
+            <li><a href="#involved">Get involved</a></li>
+            <li><a href="#news">News and events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Rotary</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="https://www.rotary.org/" target="_blank" rel="noopener noreferrer">
+                Rotary International
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://my.rotary.org/en/secure/13161" target="_blank" rel="noopener noreferrer">
+                Rotary Brand Center
+                <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
+            </li>
+            <li><a href="#" aria-disabled="true">District site, to add</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Before launch</h3>
+          <ul class="footer__links">
+            <li><a href="#" aria-disabled="true">Privacy policy, to add</a></li>
+            <li><a href="#" aria-disabled="true">Accessibility statement, to add</a></li>
+            <li><a href="#" aria-disabled="true">Photo consent notice, to add</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <p>&copy; <span id="year">2026</span> Rotary Club of Bangalore Bhuvaneshwarinagar. A local Rotary club serving Bengaluru, Karnataka, India.</p>
+        <p>Rotary and the Rotary logo are trademarks of Rotary International and are used in accordance with applicable Rotary brand guidance.</p>
+        <p>This website represents Rotary Club of Bangalore Bhuvaneshwarinagar. It does not represent Rotary International, Rotary India, or any other Rotary entity unless expressly stated.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Rotary Club of Bangalore Bhuvaneshwarinagar",
+    "alternateName": "Rotary Bangalore Bhuvaneshwarinagar",
+    "description": "A Rotary club in Bengaluru working on education, health, environment and livelihood through practical community service.",
+    "areaServed": { "@type": "City", "name": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+    "memberOf": { "@type": "NGO", "name": "Rotary International", "url": "https://www.rotary.org/" },
+    "knowsAbout": ["Education", "Health", "Environment", "Livelihood", "Community service"]
+  }
+  </script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* mobile navigation */
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      var toggleLabel = toggle.querySelector('.nav-toggle__label');
+      var toggleIcon = toggle.querySelector('use');
+
+      function setNav(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggleLabel.textContent = open ? 'Close' : 'Menu';
+        toggleIcon.setAttribute('href', open ? '#i-close' : '#i-menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setNav(!nav.classList.contains('is-open'));
+      });
+
+      nav.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setNav(false);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          setNav(false);
+          toggle.focus();
+        }
+      });
+
+      /* condense the header once the page has scrolled */
+      var header = document.getElementById('site-header');
+      var onScroll = function () {
+        header.classList.toggle('is-stuck', window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* current year */
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+
+      /* prototype form: validate, then show the designed success state */
+      var form = document.getElementById('enquiry-form');
+      var error = document.getElementById('form-error');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          error.textContent = 'Please complete the required fields so the layout can be checked.';
+          var firstInvalid = form.querySelector(':invalid');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+        error.textContent = '';
+        form.classList.add('is-sent');
+        form.querySelector('.form__success h3').setAttribute('tabindex', '-1');
+        form.querySelector('.form__success h3').focus();
+      });
+
+      document.getElementById('form-reset').addEventListener('click', function () {
+        form.reset();
+        form.classList.remove('is-sent');
+        document.getElementById('name').focus();
+      });
+
+      /* scroll reveal, motion preference respected. The hidden start state is opted
+         into here so that no-JS and script-error users still see everything. */
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var items = document.querySelectorAll('.reveal');
+
+      if (!reduce.matches && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-anim');
+
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+        items.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</body>
+</html>
