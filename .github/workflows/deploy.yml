@@ -36,7 +36,7 @@ jobs:
           rm -rf docs .claude tools drafts .vscode
           # Working prototype copy, brand PDF and club rules stay in the repo
           # but must not be served on the public Pages site.
-          rm -f rotary-club-website.html rotary-club-website-rules.md
+          rm -f rotary-club-website.html rotary-club-website-rules.md privacy.md
           rm -f "Rotary Logo_EN21_DynamicSize_FontUpdate.pdf"
           echo "removed internal planning files and non-public assets"
 
